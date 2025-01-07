@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        -45deg,
+        #800000,
+        #FF4000,
+        #FFD700,
+        #A62F00
+    );
+    background-size: 400% 400%;
+    animation: warm-gradient 15s ease infinite;
+}
+
+.logo-container {
+    display: flex;
+    margin-bottom: 7px;
+}
+
+#tagline {
+    text-align: center;
+    opacity: 0.8;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+.logo-letter {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: "Hepta Slab", serif;
+}
+
+/* Gradient Background */
+.gradient-container {
+    position: fixed;
+    inset: 0;
+    opacity: 0.6;
+    animation: warm-gradient 15s ease infinite;
+    background: linear-gradient(
+        -45deg,
+        #800000,    /* Deep Red */
+        #FF4000,    /* Pure Orange-Red */
+        #FFD700,    /* Brighter Gold */
+        #A62F00     /* Darker Orange-Red */
+    );
+    background-size: 400% 400%;
+    z-index: 0;
+}
+
+#main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+#top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    justify-content: space-between;
+    font-family: 'Hepta Slab';
+    font-weight: 600;
+}
+
+#quote {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Hepta Slab', sans-serif;
+}
+
+#author {
+    position: relative;
+    opacity: 0.7;
+    padding-left: 2rem;
+    font-size: 0.8rem;
+    font-family: 'Hepta Slab', sans-serif;
+}
+
+#question {
+    font-family: 'Rubik';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#ques {
+    position: relative;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+#subQues {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+#starting {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    width: 45%;
+    height: 2.2rem;
+    border: 1px;
+    border-radius: 30px;
+    color: #A62F00;
+    font-weight: 600;
+}
+
+#ques {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Animation */
+@keyframes warm-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
