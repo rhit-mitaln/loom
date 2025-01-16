@@ -1,149 +1,17 @@
-* {
+#home {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    overflow-y: hidden;
-}
-
-/* Overlay Styles */
-.overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 50;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        -45deg,
-        #800000,
-        #FF4000,
-        #FFD700,
-        #A62F00
-    );
+    background: linear-gradient(-45deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500);
     background-size: 400% 400%;
-    animation: warm-gradient 15s ease infinite;
-}
-
-.logo-container {
-    display: flex;
-    margin-bottom: 7px;
-}
-
-#tagline {
-    text-align: center;
-    opacity: 0.8;
-    font-family: 'Rubik', sans-serif;
-    color: white;
-}
-
-.logo-letter {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: white;
-    font-family: "Hepta Slab", serif;
-}
-
-/* Gradient Background */
-.gradient-container {
-    position: fixed;
-    inset: 0;
-    opacity: 0.6;
-    animation: warm-gradient 15s ease infinite;
-    background: linear-gradient(
-        -45deg,
-        #800000,    /* Deep Red */
-        #FF4000,    /* Pure Orange-Red */
-        #FFD700,    /* Brighter Gold */
-        #A62F00     /* Darker Orange-Red */
-    );
-    background-size: 400% 400%;
-    z-index: 0;
-}
-
-#main {
+    animation: gradient 15s ease infinite;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: black;
-    color: white;
-}
-
-#top {
-    position: relative;
-    display: flex;
-    flex-direction: row;
     width: 100vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    justify-content: space-between;
-    font-family: 'Hepta Slab';
-    font-weight: 600;
-}
-
-#quote {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    position: relative;
-    font-weight: 500;
-    margin-bottom: 10px;
-    font-family: 'Hepta Slab', sans-serif;
-}
-
-#author {
-    position: relative;
-    opacity: 0.7;
-    padding-left: 2rem;
-    font-size: 0.8rem;
-    font-family: 'Hepta Slab', sans-serif;
-}
-
-#question {
-    font-family: 'Rubik';
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 20vh;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    
 }
 
-#ques {
-    position: relative;
-    font-weight: 900;
-    margin-bottom: 5px;
-}
-
-#subQues {
-    font-size: 0.8rem;
-    margin-bottom: 20px;
-}
-
-#starting {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-button {
-    width: 45%;
-    height: 2.2rem;
-    border: 1px;
-    border-radius: 30px;
-    color: #A62F00;
-    font-weight: 600;
-}
-
-#ques {
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-/* Animation */
-@keyframes warm-gradient {
+@keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
@@ -153,5 +21,174 @@ button {
     100% {
         background-position: 0% 50%;
     }
+
+}
+
+#home-top {
+    flex: 5;
+    display: flex;
+    flex-direction: column;   
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+#home-top-top {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+#home-top-bottom {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+#home-top-quote {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+#home-top-author {
+    color: #e6e6e6
+}
+
+#home-bottom {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: none;
+    color: black;
+    font-family: 'Kanit', sans-serif;
+    border-radius: 20px 20px 0px 0px;
+    
+}
+
+#home-bottom-top {
+    flex: 3;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+#home-bottom-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2%;
+}
+
+#home-bottom-info {
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-align: justify;
+    margin-bottom: 2.8%;
+}
+
+
+#home-bottom-subinfo {
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-align: justify;
+    color: #5c5c5c;
+}
+
+#home-bottom-card-container {
+    flex: 4;
+    border: 2px solid #5c5c5c;
+    border-radius: 20px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home-bottom-card-top {
+    flex: 1;
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home-bottom-card-bottom {
+    flex: 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#home-bottom-card-title {
+    font-size: 1.2rem;
+}
+
+#home-bottom-card-subtitle {
+    color: #5c5c5c;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+#home-bottom-card-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#home-bottom-card-timetext {
+    color: #5c5c5c;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: -2px;
+}
+
+#home-bottom-card-esttime {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 1.5%;
+}
+
+#home-bottom-takeassesment {
+    border: 1px solid #fff;
+    background-color: #FF8B00;
+    border-radius: 20px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Kanit';
+    color: white;
+    font-size: 1rem;
+}
+
+#home-bottom-takeassesment :hover {
+    cursor: pointer;
+    border: 1px solid #FF8B00;
+    color: #FF8B00;
+    background-color: white;
+}
+
+#home-bottom-menu {
+    flex: 2;
+    border: 0px;
+    background-color: #000;
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
 }
 

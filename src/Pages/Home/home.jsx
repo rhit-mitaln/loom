@@ -59,59 +59,61 @@ function Home() {
   };
 
   return (
-    <div>
-      <Overlay />
-      <div className="gradient-container"></div>
-      <div className="app-content">
-        <div id="main">
-          <motion.div
-            id="top"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 4.5, duration: 0.5 }}
-          >
-            <div id="title">Loom</div>
-            <div id="profile">Pic</div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 4.7, duration: 0.5 }}
-          >
-            <div
-              id="quote"
-              style={{ fontSize: fontSize }}
-            >
-              {quote}
+    <div id='home'>
+      <div id='home-top'>
+        <div id='home-top-top'>
+          <div id='home-logo'>
+            Loom
+          </div>
+        </div>
+        <div id='home-top-bottom'>
+          <div id='home-top-quote'>
+            It’s not stress that kills us, it is our reaction to it. 
+          </div>
+          <div id='home-top-author'>
+          - Hans Selye
+          </div>
+        </div>
+      </div>
+      <div id='home-bottom'>
+        <div id='home-bottom-top'>
+          <div id='home-bottom-title'>
+            Take Daily Assessment
+          </div>
+          <div id='home-bottom-info'>
+            Helps not only you, but also us to get to know you better.
+          </div>
+          <div id='home-bottom-subinfo'>
+            Read this article to know more about the daily assessments we encourage you to take and how it helps.
+          </div>
+        </div>
+        <div id='home-bottom-card-container'>
+          <div id='home-bottom-card-top'>
+            <div id='home-bottom-card-title'>
+              Daily Assessment
             </div>
-            <div id="author">- {author}</div>
-          </motion.div>
-
-          <motion.div
-            id="question"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 4.9, duration: 0.5 }}
-          >
-            <div id="questionText">
-              <div id="ques">Let's train your mind</div>
-              <div id="subQues">Start by taking your daily assessment or browse meditations.</div>
+           <div id='home-bottom-card-subtitle'>
+              Answer a few questions and log your day.
+           </div>
+          </div>
+          <div id='home-bottom-card-bottom'>
+            <div id='home-bottom-card-time'>
+              <div id='home-bottom-card-timetext'>
+                Estimated Time
+              </div>
+              <div id='home-bottom-card-esttime'>
+                5-7 minutes
+              </div>
             </div>
-            <div id="starting">
-              <button id="assessment">Take Daily Assessment</button>
-              <button id="meditations">Browse Meditations</button>
+            <div>
+              <button id='home-bottom-takeassesment'>
+                Start
+              </button>
             </div>
-          </motion.div>
-
-          <motion.div
-            id="week"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 5, duration: 0.5 }}
-          >
-            <WeekProgress />
-          </motion.div>
+          </div>
+        </div>
+        <div id='home-bottom-menu'>
+          menu
         </div>
       </div>
     </div>
