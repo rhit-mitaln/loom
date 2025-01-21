@@ -1,14 +1,96 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './home.css';
 import WeekProgress from '../../components/week';
 import Overlay from '../../components/Overlay';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { div } from 'framer-motion/client';
 
-function Home() {
+const LoadingScreen = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // 5 seconds
+
+    return () => clearTimeout(timer); // Cleanup the timeout
+  }, []);
+
+  const loadingVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { duration: 1, staggerChildren: 0.1 } },
+    exit: { opacity: 0, transition: { duration: 0.5 } },
+  };
+
+  const letterVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const contentVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { delay: 0.5, duration: 0.5 } }, // Delay to wait for loading screen exit
+  };
+
+  return (
+    <AnimatePresence mode="wait">
+      {isLoading ? (
+        <motion.div
+          key="loading"
+          id='overlay-home'
+          variants={loadingVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            background: 'linear-gradient(-45deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500)',
+            backgroundSize: '400% 400%',
+            animation: 'gradient 5s ease infinite',
+            fontFamily: 'Kanit',
+            color: 'white',
+            zIndex: 1000,
+          }}
+        >
+          <motion.div style={{ display: 'flex', fontSize: '36px', fontWeight: 'bold' }}>
+            {['B','l', 'o', 'o', 'm'].map((letter, index) => (
+              <motion.span
+                key={index}
+                variants={letterVariants}
+                style={{ marginRight: '5px' }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </motion.div>
+        </motion.div>
+      ) : (
+        <motion.div
+          key="content"
+          variants={contentVariants}
+          initial="initial"
+          animate="animate"
+        >
+          {children}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+function HomeContent() {
   const [quote, setQuote] = useState('Loading quote...');
   const [author, setAuthor] = useState('');
   const [fontSize, setFontSize] = useState('3.5rem');
-  
+  const [showOverlay, setShowOverlay] = useState(false);
+
   useEffect(() => {
     async function fetchQuotes() {
       try {
@@ -41,10 +123,20 @@ function Home() {
     fetchQuotes();
   }, []);
 
+  useEffect(() => {
+    if (showOverlay) {
+      const timeoutId = setTimeout(() => {
+        setShowOverlay(false);
+      }, 5000);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [showOverlay]);
+
   const adjustFontSize = (charCount) => {
-    const maxFontSize = 3;
+    const maxFontSize = 2.5;
     const minFontSize = 1.5;
-    const maxChars = 100;
+    const maxChars = 70;
     const minChars = 20;
 
     if (charCount > maxChars) {
@@ -63,15 +155,15 @@ function Home() {
       <div id='home-top'>
         <div id='home-top-top'>
           <div id='home-logo'>
-            Loom
+            Bloom
           </div>
         </div>
         <div id='home-top-bottom'>
-          <div id='home-top-quote'>
-            It’s not stress that kills us, it is our reaction to it. 
+          <div id='home-top-quote' style={{ fontSize: fontSize}}>
+            {quote}
           </div>
           <div id='home-top-author'>
-          - Hans Selye
+          - {author}
           </div>
         </div>
       </div>
@@ -120,5 +212,12 @@ function Home() {
   );
 }
 
-export default Home;
+function Home() {
+  return (
+    <LoadingScreen>
+      <HomeContent />
+    </LoadingScreen>
+  );
+}
 
+export default Home;

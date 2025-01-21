@@ -11,6 +11,14 @@
     
 }
 
+#overlay-home {
+    background: linear-gradient(-45deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    width: 100vw;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -50,10 +58,11 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 5%;
+    justify-content: start;
+    transform: translateY(-5%);
 }
 
 #home-top-quote {
-    font-size: 2.5rem;
     line-height: 2.5rem;
 }
 
@@ -161,9 +170,14 @@
     margin-bottom: 1.5%;
 }
 
+#home-logo {
+    font-family: 'Playwrite IN';
+    font-weight: 500;
+}
+
 #home-bottom-takeassesment {
     border: 1px solid #fff;
-    background-color: #FF8B00;
+    background: -webkit-linear-gradient(225deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500) 0% 0% / 300% 300%;
     border-radius: 20px;
     padding: 8px;
     padding-left: 20px;
@@ -171,6 +185,8 @@
     font-family: 'Kanit';
     color: white;
     font-size: 1rem;
+    -webkit-animation: gradient_move 5s ease infinite;
+    animation: gradient_move 5s ease infinite;
 }
 
 #home-bottom-takeassesment :hover {
@@ -192,3 +208,14 @@
     flex-direction: column;
 }
 
+@-webkit-keyframes gradient_move {
+    0%{background-position: 0% 92%}
+    50%{background-position: 100% 9%}
+    100%{background-position: 0% 92%}
+  }
+  
+  @keyframes gradient_move {
+    0%{background-position: 0% 92%}
+    50%{background-position: 100% 9%}
+    100%{background-position: 0% 92%}
+  }

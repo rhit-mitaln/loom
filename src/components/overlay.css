@@ -1,0 +1,61 @@
+/* Overlay Entry Container */
+#overlay-entry {
+    background: linear-gradient(-45deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Overlay Content */
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Logo Text Styling */
+.logo-container {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.logo-letter {
+    color: white; /* Ensures text is white */
+}
+
+/* Tagline Styling */
+#tagline {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white; /* Ensures tagline text is white */
+}
