@@ -4,6 +4,7 @@ import WeekProgress from '../../components/week';
 import Overlay from '../../components/Overlay';
 import { motion, AnimatePresence } from 'framer-motion';
 import { div } from 'framer-motion/client';
+import { SignedIn, UserButton } from '@clerk/clerk-react';
 
 const LoadingScreen = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -156,6 +157,11 @@ function HomeContent() {
         <div id='home-top-top'>
           <div id='home-logo'>
             Bloom
+          </div>
+          <div id='home-profile'>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </div>
         </div>
         <div id='home-top-bottom'>
