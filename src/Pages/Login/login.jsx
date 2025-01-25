@@ -13,7 +13,7 @@ function Login() {
         <div id="login">
             <div id="login-top">
                 <div id="login-logo">Bloom</div>
-                <div id="login-tagline">Your next step to better mental health</div>
+                <div id="login-tagline">Better mental health</div>
             </div>
 
             <div id="login-bottom">
@@ -25,11 +25,9 @@ function Login() {
                         id="login-buttons-buttons-login"
                         className="login-button"
                     >
-                        Log in
+                        Continue
                     </button>
                 </SignInButton>
-
-                <div id="login-buttons-text">or sign up instead</div>
             </div>
         </div>
     );
