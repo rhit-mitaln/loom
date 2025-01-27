@@ -202,12 +202,56 @@
     border: 0px;
     background-color: #000;
     border-radius: 20px;
+    color: #aaaaaa;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
     display: flex;
     flex-direction: column;
 }
+
+
+
+#menu-icon-selcted-home {
+    background-color: #FF7700;
+  }
+
+/* Add to home.css */
+#home-bottom-menu-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  #home-current-button {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .menu-icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: transform 0.2s ease;
+    border-radius: 20px;
+  }
+  
+  
+  .size-6 {
+    width: 2rem;
+    height: 2rem;
+    color: #333; /* Adjust color to match your theme */
+  }
+
+  .menu-icon-button-selected {
+    background-color: #562f00;
+  }
+  
 
 @-webkit-keyframes gradient_move {
     0%{background-position: 0% 92%}
