@@ -54,10 +54,45 @@
 }
 
 #login-tagline {
-    color: white;
+    color: transparent;
     font-family: 'Kanit';
     margin-top: -5%;
+    animation: taglineLogin 3.5s 1 ease forwards;
 }
+
+@keyframes taglineLogin {
+    0% {
+        color: transparent;
+    }
+    90% {
+        color: transparent;
+    }
+    100% {
+        color: #FFffff;
+    }
+}
+
+.login-logo-svg path {
+    fill: transparent;
+    stroke: #FFffff;
+    stroke-width: 1;
+    stroke-dasharray: 680;
+    stroke-dashoffset: 680;
+    animation: animationSvgLogin 4s 1 ease forwards;
+  }
+
+  @keyframes animationSvgLogin {
+    0% {
+        stroke-dashoffset: 680;
+    }
+    80% {
+        fill: transparent;
+    }
+    100% {
+        fill: #FFffff;
+        stroke-dashoffset: 0;
+    }
+  }
 
 #login-buttons-buttons-login {
     background: white;
@@ -72,17 +107,7 @@
     font-family: 'Kanit';
     font-size: 1.01rem;
     mix-blend-mode: lighten;
-
-}
-
-#login-buttons-buttons-login::before {
-    content: "Continue"; /* Add text content */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black; /* Text color */
-    pointer-events: none; /* Ensure clicks go through to the button */
+    color: #5c7056;
 }
 
 #login-buttons-text {
