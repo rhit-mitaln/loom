@@ -264,3 +264,31 @@
     50%{background-position: 100% 9%}
     100%{background-position: 0% 92%}
   }
+
+  .menu-icon-button-selected path {
+    fill: transparent;
+    stroke: #FF8B00;
+    stroke-width: 1;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: animationSvg 10s infinite ease-in-out;
+  }
+
+  @keyframes animationSvg {
+    0% {
+        stroke-dashoffset: 5000;
+    }
+    20% {
+        fill: transparent;
+    }
+    50% {
+        fill: #FF8B00;
+        stroke-dashoffset: 0;
+    }
+    90% {
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 5000;
+    }
+  }
