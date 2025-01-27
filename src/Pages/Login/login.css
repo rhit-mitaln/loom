@@ -1,3 +1,13 @@
+#login-bg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 #login {
     padding: 0;
     margin: 0;
@@ -5,11 +15,10 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    overflow: none;
-    border: none;
-    background-image: url(./loginWelcomeBack.jpg);
-    background-size: 200%;
-    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 #login-top {
@@ -52,19 +61,34 @@
 
 #login-buttons-buttons-login {
     background: white;
-    color: #FF7700;
-    width: 100%;
+    mix-blend-mode: lighten;
+    width: 70vw;
     padding-top: 7px;
     padding-bottom: 7px;
+    margin-left: 15%;
+    margin-right: 15%;
     border: none;
     border-radius: 12px;
     font-family: 'Kanit';
     font-size: 1.01rem;
+    mix-blend-mode: lighten;
+
+}
+
+#login-buttons-buttons-login::before {
+    content: "Continue"; /* Add text content */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* Text color */
+    pointer-events: none; /* Ensure clicks go through to the button */
 }
 
 #login-buttons-text {
     font-family: 'Kanit';
     margin-top: 2%;
     font-size: 0.9rem;
+    color: white;
 }
 
