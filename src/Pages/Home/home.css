@@ -1,3 +1,50 @@
+#home-overlay-bg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+#overlay-home-svg {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.home-logo-svg path {
+    fill: transparent;
+    stroke: #FFFFFF;
+    stroke-width: 1;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animationSvgOverlay 4s 1 ease-in-out forwards;
+  }
+
+  @keyframes animationSvgOverlay {
+    0% {
+        stroke-dashoffset: 500;
+    }
+    80% {
+        fill: transparent;
+    }
+    100% {
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+  }
+
 #home {
     padding: 0;
     margin: 0;
@@ -8,16 +55,9 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    
 }
 
-#overlay-home {
-    background: linear-gradient(-45deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
-    width: 100vw;
-}
+
 
 @keyframes gradient {
     0% {
@@ -278,7 +318,7 @@
     0% {
         stroke-dashoffset: 5000;
     }
-    20% {
+    10% {
         fill: transparent;
     }
     50% {
