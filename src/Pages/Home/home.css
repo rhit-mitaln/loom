@@ -48,13 +48,14 @@
 #home {
     padding: 0;
     margin: 0;
-    background: linear-gradient(-45deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500);
+    background: #FDFCFA;
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
 }
 
 
@@ -76,7 +77,7 @@
     flex: 5;
     display: flex;
     flex-direction: column;   
-    color: white;
+    color: black;
     font-family: 'Kanit', sans-serif;
 }
 
@@ -91,218 +92,63 @@
     padding-top: 5%;
 }
 
-#home-top-bottom {
-    flex: 4;
+#home-main {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    justify-content: start;
-    transform: translateY(-5%);
+    flex: 50;
 }
 
-#home-top-quote {
-    line-height: 2.5rem;
-}
-
-#home-top-author {
-    color: #e6e6e6
-}
-
-#home-bottom {
-    flex: 6;
+#home-welcome {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border: none;
-    color: black;
-    font-family: 'Kanit', sans-serif;
-    border-radius: 20px 20px 0px 0px;
-    
-}
-
-#home-bottom-top {
-    flex: 3;
     padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 2%;
 }
 
-#home-bottom-title {
+#home-welcome-message {
+    color: #000;
+    font-weight: 600;
     font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 2%;
 }
 
-#home-bottom-info {
-    font-weight: 300;
-    font-size: 0.8rem;
-    line-height: 1rem;
-    text-align: justify;
-    margin-bottom: 2.8%;
+#home-welcome-date {
+    color: #acacac;
+    font-size: 0.9rem;
 }
 
-
-#home-bottom-subinfo {
-    font-weight: 300;
-    font-size: 0.8rem;
-    line-height: 1rem;
-    text-align: justify;
-    color: #5c5c5c;
-}
-
-#home-bottom-card-container {
-    flex: 4;
-    border: 2px solid #5c5c5c;
-    border-radius: 20px;
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-}
-
-#home-bottom-card-top {
-    flex: 1;
-    padding-top: 2.5%;
-    padding-left: 5%;
-    padding-bottom: 0%;
-    display: flex;
-    flex-direction: column;
-}
-
-#home-bottom-card-bottom {
-    flex: 1;
-    padding-left: 5%;
-    padding-right: 5%;
-    align-items: center;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#home-bottom-card-title {
-    font-size: 1.2rem;
-}
-
-#home-bottom-card-subtitle {
-    color: #5c5c5c;
-    font-weight: 400;
-    font-size: 0.8rem;
-}
-
-#home-bottom-card-time {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-#home-bottom-card-timetext {
-    color: #5c5c5c;
-    font-weight: 400;
-    font-size: 0.8rem;
-    margin-bottom: -2px;
-}
-
-#home-bottom-card-esttime {
-    font-weight: 400;
-    font-size: 0.8rem;
-    margin-bottom: 1.5%;
-}
-
-#home-logo {
-    font-family: 'Playwrite IN';
-    font-weight: 500;
-}
-
-#home-bottom-takeassesment {
-    border: 1px solid #fff;
-    background: -webkit-linear-gradient(225deg, #FFB300, #FF9F00, #FF8B00, #FF7700, #CC5500) 0% 0% / 300% 300%;
-    border-radius: 20px;
-    padding: 8px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: 'Kanit';
-    color: white;
-    font-size: 1rem;
-    -webkit-animation: gradient_move 5s ease infinite;
-    animation: gradient_move 5s ease infinite;
-}
-
-#home-bottom-takeassesment :hover {
-    cursor: pointer;
-    border: 1px solid #FF8B00;
-    color: #FF8B00;
-    background-color: white;
-}
-
-#home-bottom-menu {
-    flex: 2;
-    border: 0px;
-    background-color: #000;
-    border-radius: 20px;
-    color: #aaaaaa;
+#home-image {
+    width: 90vw;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 5%;
+    height: 45vh;
+    align-self: center;
+    margin-top: 5%;
+    background-size: cover;
+    background-position: center;
+    background: url("./quoteBG.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: "DM Sans", sans-serif;
     display: flex;
     flex-direction: column;
-}
-
-
-
-#menu-icon-selcted-home {
-    background-color: #FF7700;
+    justify-content: center;
   }
 
-/* Add to home.css */
-#home-bottom-menu-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  #home-current-button {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .menu-icon-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    transition: transform 0.2s ease;
-    border-radius: 20px;
-  }
-  
-  
-  .size-6 {
-    width: 2rem;
-    height: 2rem;
-    color: #333; /* Adjust color to match your theme */
+  #home-quote-image-container {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
-  .menu-icon-button-selected {
-    background-color: #562f00;
+  #home-image-quote {
+    font-size: 1.5rem;
+    font-weight: 600;
   }
-  
 
-@-webkit-keyframes gradient_move {
-    0%{background-position: 0% 92%}
-    50%{background-position: 100% 9%}
-    100%{background-position: 0% 92%}
-  }
-  
-  @keyframes gradient_move {
-    0%{background-position: 0% 92%}
-    50%{background-position: 100% 9%}
-    100%{background-position: 0% 92%}
+  #home-image-author {
+    color: #d6d6d6;
+    font-size: 0.9rem;
   }
 
   .menu-icon-button-selected path {
@@ -313,6 +159,57 @@
     stroke-dashoffset: 5000;
     animation: animationSvg 10s infinite ease-in-out;
   }
+
+  .home-logo-small-svg path{
+    fill: transparent;
+    stroke: #FF8B00;
+    stroke-width: 1;
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: animationSvgLogo 8s forwards ease-in-out;
+  }
+
+
+  #home-dailyassesment-card {
+    width: 90vw;
+    height: 20vh;
+    border: solid 2px #cecece;
+    align-self: center;
+    border-radius: 10px;
+    margin-top: 5%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #home-daily-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  #home-daily-sub {
+    font-size: 0.7rem;
+    color: #959595;
+  }
+
+  #home-daily-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5vh;
+  }
+
+  #home-daily-estimation {
+    color: #959595;
+    font-size: 0.8rem;
+  }
+
+  #home-daily-timeval {
+    font-weight: 500;
+  }
+
+
 
   @keyframes animationSvg {
     0% {
@@ -330,5 +227,15 @@
     }
     100% {
         stroke-dashoffset: 5000;
+    }
+  }
+
+  @keyframes animationSvgLogo {
+    0% {
+        stroke-dashoffset: 5000;
+    }
+    100% {
+        fill: #FF8B00;
+        stroke-dashoffset: 0;
     }
   }

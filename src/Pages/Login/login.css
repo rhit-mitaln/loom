@@ -55,7 +55,7 @@
 
 #login-tagline {
     color: transparent;
-    font-family: 'Kanit';
+    font-family: 'DM Sans';
     margin-top: -5%;
     animation: taglineLogin 3.5s 1 ease forwards;
 }
@@ -104,14 +104,15 @@
     margin-right: 15%;
     border: none;
     border-radius: 12px;
-    font-family: 'Kanit';
-    font-size: 1.01rem;
+    font-family: 'DM Sans';
+    font-weight: 600;
+    font-size: 1rem;
     mix-blend-mode: lighten;
     color: #5c7056;
 }
 
 #login-buttons-text {
-    font-family: 'Kanit';
+    font-family: 'DM Sans';
     margin-top: 2%;
     font-size: 0.9rem;
     color: white;
