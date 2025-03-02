@@ -234,12 +234,14 @@
     justify-content: space-between;
     background-color: #000000;
     border-radius: 20px;
+    align-items: center;
   }
 
   .menu-icon-button {
     background-color: #000;
     width: 4rem;
-    border-radius: 12px;
+    height: 4.01rem;
+    border-radius: 15px;
     border: 2px solid #1b1b1b;
   }
 
